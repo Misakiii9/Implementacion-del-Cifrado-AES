@@ -31,6 +31,8 @@ function encryptMessage() {
         a.download = 'mensaje_cifrado.zip';
         a.click();
         window.URL.revokeObjectURL(url);
+    }).catch(() => {
+        alert('Error al generar el archivo ZIP');
     });
 }
 
@@ -39,7 +41,7 @@ function decryptMessage() {
     const key = document.getElementById('decryptKey').value;
 
     if (!fileInput.files[0]) {
-        alert('Por favor, sube un archivo');
+        alert('Por favor, sube un archivo ZIP');
         return;
     }
     if (!key) {

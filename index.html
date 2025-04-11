@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cifrado y Descifrado</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado y Descifrado AES</title>
+    <link rel="stylesheet" href="estilos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
@@ -26,13 +27,12 @@
         <!-- Sección de Descifrado -->
         <div id="decrypt" class="section hidden">
             <h2>Descifrar Mensaje</h2>
-            <input type="file" id="decryptFile">
+            <input type="file" id="decryptFile" accept=".zip">
             <input type="text" id="decryptKey" placeholder="Ingresa la clave">
             <button onclick="decryptMessage()">Descifrar</button>
             <textarea id="decryptedText" placeholder="Mensaje descifrado aparecerá aquí" readonly></textarea>
         </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
